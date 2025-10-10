@@ -1,4 +1,8 @@
-<<<<<<< HEAD
+# scarlettriverahair
+Professional React website for hairstylist Scarlett Rivera
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -69,7 +73,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# scarlettriverahair
-Professional React website for hairstylist Scarlett Rivera
->>>>>>> 68b76b8af6b5f0e6815519534167ea35b02101c2
