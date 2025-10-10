@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { Helmet } from "react-helmet";
 
 function Contact() {
   const formRef = useRef();
@@ -34,6 +35,12 @@ function Contact() {
 
   return (
     <div className="container" style={{ maxWidth: '600px' }}>
+      <Helmet>
+        <title>Scarlett Rivera Hair | Contact</title>
+        <meta name="description" content="Get in touch with Scarlett Rivera Hair for inquiries about bridal and styling services." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://scarlettriverahair.com/contact" />
+      </Helmet>
       <h2>Contact Scarlett Rivera</h2>
       <p>
         Prefer email? <a href="mailto:scarlettriverahair@gmail.com">scarlettriverahair@gmail.com</a>

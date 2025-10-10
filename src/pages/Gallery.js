@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 
 function Gallery() {
   // Replace with real images as you receive them
@@ -10,6 +11,12 @@ function Gallery() {
 
   return (
     <div className="container">
+      <Helmet>
+        <title>Scarlett Rivera Hair | Gallery</title>
+        <meta name="description" content="Explore the gallery of Scarlett Rivera Hair showcasing stunning hairstyles and transformations." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://scarlettriverahair.com/gallery" />
+      </Helmet>
       <h2>Gallery</h2>
       <div className="row">
         {placeholderImages.map((src, i) => (
