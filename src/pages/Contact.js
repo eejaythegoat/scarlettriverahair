@@ -5,10 +5,12 @@ import ReactGA from "react-ga4";
 function Contact() {
   const formRef = useRef();
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Handles actual form submission via Netlify Forms (no redirect!)
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     const form = formRef.current;
     const data = new FormData(form);
@@ -18,7 +20,10 @@ function Contact() {
       body: data,
     })
       .then(() => setSubmitted(true))
-      .catch((error) => alert(error));
+      .catch((error) => {
+        alert(error);
+        setIsSubmitting(false); // Re-enable button if error
+      });
     ReactGA.event({
       category: "Contact",
       action: "Contact Form Submitted"
@@ -84,7 +89,13 @@ function Contact() {
           <label>Message</label>
           <textarea className="form-control" name="message" rows={4} required />
         </div>
-        <button className="btn btn-primary" type="submit">Send Inquiry</button>
+        <button
+          className="btn btn-primary"
+          type="submit"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? "Sending..." : "Send Inquiry"}
+        </button>
       </form>
       <hr />
       <div className="mt-3">
