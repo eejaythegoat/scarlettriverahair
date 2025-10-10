@@ -4,7 +4,7 @@ function Services() {
   return (
     <div>
       <h2>Services & Pricing</h2>
-      <p>List of services and prices—especially bridal packages—will go here.</p>
+      <p>List of services and prices will go here.</p>
     </div>
   );
 }

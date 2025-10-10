@@ -21,13 +21,13 @@ function Navbar() {
               <NavLink className="nav-link" to="/services">Services</NavLink>
             </li>
             <li className="nav-item">
+              <NavLink className="nav-link" to="/bridal">Bridal</NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink className="nav-link" to="/gallery">Gallery</NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/social-blog">Social & Blog</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/tips-faq">Tips & FAQ</NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/contact">Contact</NavLink>
