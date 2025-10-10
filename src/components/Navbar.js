@@ -1,42 +1,27 @@
 import React from 'react';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import { NavLink, Link } from 'react-router-dom';
 
-function Navbar() {
+function CustomNavbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container">
-        <Link className="navbar-brand fw-bold" to="/">Scarlett Rivera Hair</Link>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/">Home</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/about">About</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/services">Services</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/bridal">Bridal</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/gallery">Gallery</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/social-blog">Social & Blog</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/contact">Contact</NavLink>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <Navbar bg="light" expand="lg" className="mb-4">
+      <Container>
+        <Navbar.Brand as={Link} to="/" className="fw-bold">Scarlett Rivera Hair</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link as={NavLink} to="/" end>Home</Nav.Link>
+            <Nav.Link as={NavLink} to="/about">About</Nav.Link>
+            <Nav.Link as={NavLink} to="/services">Services</Nav.Link>
+            <Nav.Link as={NavLink} to="/bridal">Bridal</Nav.Link>
+            <Nav.Link as={NavLink} to="/gallery">Gallery</Nav.Link>
+            <Nav.Link as={NavLink} to="/social-blog">Social & Blog</Nav.Link>
+            <Nav.Link as={NavLink} to="/contact">Contact</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
-export default Navbar;
+export default CustomNavbar;
