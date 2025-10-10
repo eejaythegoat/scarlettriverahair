@@ -1,14 +1,23 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 function Contact() {
+  const formRef = useRef();
   const [submitted, setSubmitted] = useState(false);
 
-  // This function will be triggered after Netlify redirect (see below)
-  React.useEffect(() => {
-    if (window.location.search.includes('success=true')) {
-      setSubmitted(true);
-    }
-  }, []);
+  // Handles actual form submission via Netlify Forms (no redirect!)
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const form = formRef.current;
+    const data = new FormData(form);
+
+    fetch("/", {
+      method: "POST",
+      body: data,
+    })
+      .then(() => setSubmitted(true))
+      .catch((error) => alert(error));
+  };
 
   if (submitted) {
     return (
@@ -16,7 +25,7 @@ function Contact() {
         <h2>Thank you for reaching out!</h2>
         <p>
           Your message has been sent and Scarlett will get back to you as soon as possible.<br />
-          If your inquiry is urgent, feel free to email her directly at <a href="mailto:scarlettriverahair@gmail.com">scarlettriverahair@gmail.com</a> or book your appointment online.
+          For urgent inquiries, email <a href="mailto:scarlettriverahair@gmail.com">scarlettriverahair@gmail.com</a> or book your appointment online.
         </p>
         <a href="/" className="btn btn-primary mt-3">Back to Home</a>
       </div>
@@ -36,13 +45,11 @@ function Contact() {
         method="POST"
         data-netlify="true"
         netlify-honeypot="bot-field"
-        action="/contact?success=true"
+        ref={formRef}
+        onSubmit={handleSubmit}
       >
-        {/* Netlify form required hidden input */}
         <input type="hidden" name="form-name" value="contact" />
-        {/* Honeypot field for bots */}
         <input type="hidden" name="bot-field" />
-
         <div className="mb-3">
           <label>Name</label>
           <input className="form-control" name="name" required />
