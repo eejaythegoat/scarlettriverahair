@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
+import Bridal from './pages/Bridal';
 import Gallery from './pages/Gallery';
 import SocialBlog from './pages/SocialBlog';
 import Contact from './pages/Contact';

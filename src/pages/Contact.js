@@ -55,6 +55,9 @@ function Contact() {
           Book with Scarlett at Nu Roots Salon
         </a>
       </div>
+      <p>
+        Prefer email? <a href="mailto:scarlettriverahair@gmail.com">scarlettriverahair@gmail.com</a>
+      </p>
     </div>
   );
 }
