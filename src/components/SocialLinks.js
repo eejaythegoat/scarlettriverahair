@@ -2,7 +2,7 @@ import React from 'react';
 
 const socials = [
   { name: "Instagram", url: "https://www.instagram.com/scarlettriverahair/?hl=en", icon: "bi bi-instagram" },
-  { name: "Facebook", url: "https://www.facebook.com/scarlett.rivera.372/", icon: "bi bi-facebook" },
+  { name: "Facebook", url: "https://www.facebook.com/p/Scarlett-Rivera-Hair-61577646897809/", icon: "bi bi-facebook" },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/scarlett-rivera-05a650101", icon: "bi bi-linkedin" },
   { name: "TikTok", url: "https://www.tiktok.com/@scarlettscissorhands", icon: "bi bi-tiktok" },
 ];

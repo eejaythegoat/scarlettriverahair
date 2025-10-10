@@ -4,7 +4,7 @@ function Home() {
   return (
     <div>
       <h2>Welcome to Scarlett Rivera Hair!</h2>
-      <p>Specializing in bridal, color, and style transformations in Champaign-Urbana.</p>
+      <p>Specializing in bridal, color, and style transformations in Wheaton.</p>
     </div>
   );
 }
