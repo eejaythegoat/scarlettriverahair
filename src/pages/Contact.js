@@ -1,39 +1,48 @@
 import React, { useState } from 'react';
 
 function Contact() {
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    inquiry: '',
-    message: '',
-  });
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Thank you for your message! (Form will email Scarlett later)');
-    // TODO: Add email integration when you get her email
-    setForm({ name: '', email: '', inquiry: '', message: '' });
-  };
+  if (submitted) {
+    return (
+      <div className="container" style={{ maxWidth: '600px' }}>
+        <h2>Thank you for your message!</h2>
+        <p>Scarlett will get back to you soon.</p>
+      </div>
+    );
+  }
 
   return (
-    <div className="container" style={{maxWidth: '600px'}}>
+    <div className="container" style={{ maxWidth: '600px' }}>
       <h2>Contact Scarlett Rivera</h2>
-      <form onSubmit={handleSubmit}>
+      <p>
+        Prefer email? <a href="mailto:scarlettriverahair@gmail.com">scarlettriverahair@gmail.com</a>
+      </p>
+      <hr />
+
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        onSubmit={() => setSubmitted(true)}
+      >
+        {/* Netlify form required hidden input */}
+        <input type="hidden" name="form-name" value="contact" />
+        {/* Honeypot field for bots */}
+        <input type="hidden" name="bot-field" />
+
         <div className="mb-3">
           <label>Name</label>
-          <input className="form-control" name="name" value={form.name} onChange={handleChange} required />
+          <input className="form-control" name="name" required />
         </div>
         <div className="mb-3">
           <label>Email</label>
-          <input className="form-control" name="email" type="email" value={form.email} onChange={handleChange} required />
+          <input className="form-control" name="email" type="email" required />
         </div>
         <div className="mb-3">
           <label>Inquiry Type</label>
-          <select className="form-select" name="inquiry" value={form.inquiry} onChange={handleChange} required>
+          <select className="form-select" name="inquiry" required>
             <option value="">Select...</option>
             <option value="Bridal">Bridal</option>
             <option value="Color">Color</option>
@@ -43,7 +52,7 @@ function Contact() {
         </div>
         <div className="mb-3">
           <label>Message</label>
-          <textarea className="form-control" name="message" rows={4} value={form.message} onChange={handleChange} required />
+          <textarea className="form-control" name="message" rows={4} required />
         </div>
         <button className="btn btn-primary" type="submit">Send Inquiry</button>
       </form>
@@ -55,9 +64,6 @@ function Contact() {
           Book with Scarlett at Nu Roots Salon
         </a>
       </div>
-      <p>
-        Prefer email? <a href="mailto:scarlettriverahair@gmail.com">scarlettriverahair@gmail.com</a>
-      </p>
     </div>
   );
 }
