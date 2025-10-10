@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Helmet } from "react-helmet";
+import ReactGA from "react-ga4";
 
 function Contact() {
   const formRef = useRef();
@@ -18,6 +19,10 @@ function Contact() {
     })
       .then(() => setSubmitted(true))
       .catch((error) => alert(error));
+    ReactGA.event({
+      category: "Contact",
+      action: "Contact Form Submitted"
+    });
   };
 
   if (submitted) {
