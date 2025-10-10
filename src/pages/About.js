@@ -2,9 +2,10 @@ import React from 'react';
 
 function About() {
   return (
-    <div>
+    <div className="container">
       <h2>About Scarlett Rivera</h2>
-      <p>Placeholder for Scarlett's bio, experience, and certifications.</p>
+      <p>Scarlett Rivera is a licensed cosmetologist and owner of Scarlett Rivera Hair LLC, proudly serving the Champaign-Urbana area. Specializing in bridal, color, and style transformations.</p>
+      <p><em>More about Scarlett's journey, credentials, and philosophy coming soon.</em></p>
     </div>
   );
 }
