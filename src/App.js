@@ -12,7 +12,7 @@ import SocialBlog from './pages/SocialBlog';
 import Contact from './pages/Contact';
 
 // Initialize Google Analytics once (outside component)
-ReactGA.initialize('G-HJ89F9Q3VF');
+ReactGA.initialize('G-QFQYGV9ZYJ');
 
 // Create a wrapper to track route changes
 function GAListener({ children }) {
