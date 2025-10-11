@@ -7,21 +7,19 @@ function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Track "Book Now" button clicks
+  // Track "Book Now" button clicks (GA4 event style)
   const handleBookNowClick = () => {
-    ReactGA.event({
-      category: "Booking",
-      action: "Book Now Button Clicked",
-      label: "Contact Page"
+    ReactGA.event("book_now_button_clicked", {
+      page_location: window.location.pathname,
+      page_title: document.title
     });
   };
 
-  // Track email link clicks
+  // Track email link clicks (GA4 event style)
   const handleEmailClick = () => {
-    ReactGA.event({
-      category: "Contact",
-      action: "Email Link Clicked",
-      label: "Contact Page"
+    ReactGA.event("email_link_clicked", {
+      page_location: window.location.pathname,
+      page_title: document.title
     });
   };
 
@@ -42,9 +40,9 @@ function Contact() {
         alert(error);
         setIsSubmitting(false); // Re-enable button if error
       });
-    ReactGA.event({
-      category: "Contact",
-      action: "Contact Form Submitted"
+    ReactGA.event("contact_form_submitted", {
+      page_location: window.location.pathname,
+      page_title: document.title
     });
   };
 
