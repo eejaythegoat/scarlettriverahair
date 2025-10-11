@@ -1,6 +1,6 @@
 import React from "react";
 
-const bioImg = process.env.PUBLIC_URL + "/images/scarlett-bio.jpegig";
+const bioImg = process.env.PUBLIC_URL + "/images/scarlett-bio.jpeg"; // Make sure this image exists!
 
 export default function Home() {
   return (
