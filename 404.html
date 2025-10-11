@@ -3,11 +3,14 @@
   <head>
     <meta http-equiv="refresh" content="0; url=/" />
     <script>
-      // GitHub Pages 404 redirect for React SPA
+      // GitHub Pages 404 redirect for React SPA with repo basename
       (function() {
-        var l = window.location;
-        var path = l.pathname.replace(/^\/scarlettriverahair/, '');
-        window.location.replace('/scarlettriverahair/' + (path ? path.replace(/^\//, '') : ''));
+        // Get the repo name (adjust if your repo name changes)
+        var repo = "/scarlettriverahair";
+        // Remove the repo name from the start of the path (if present)
+        var path = window.location.pathname.replace(repo, "");
+        // Redirect to the correct index.html with the path as hash
+        window.location.replace(repo + "/#" + path + window.location.search + window.location.hash);
       })();
     </script>
   </head>
