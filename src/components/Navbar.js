@@ -1,27 +1,17 @@
-import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import { NavLink, Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-function CustomNavbar() {
+export default function Navbar() {
   return (
-    <Navbar bg="light" expand="lg" className="mb-4">
-      <Container>
-        <Navbar.Brand as={Link} to="/" className="fw-bold">Scarlett Rivera Hair</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link as={NavLink} to="/" end>Home</Nav.Link>
-            <Nav.Link as={NavLink} to="/about">About</Nav.Link>
-            <Nav.Link as={NavLink} to="/services">Services</Nav.Link>
-            <Nav.Link as={NavLink} to="/bridal">Bridal</Nav.Link>
-            <Nav.Link as={NavLink} to="/gallery">Gallery</Nav.Link>
-            <Nav.Link as={NavLink} to="/social-blog">Social & Blog</Nav.Link>
-            <Nav.Link as={NavLink} to="/contact">Contact</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <header className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur border-b border-neutral-100 z-50">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+        <Link to="/" className="font-extrabold text-xl tracking-tight text-black">Scarlett Rivera Hair</Link>
+        <div className="flex gap-6 text-base font-medium">
+          <Link to="/services" className="hover:text-black text-neutral-600 transition">Services</Link>
+          <Link to="/bridal" className="hover:text-black text-neutral-600 transition">Bridal</Link>
+          <Link to="/contact" className="hover:text-black text-neutral-600 transition">Contact</Link>
+        </div>
+      </nav>
+    </header>
   );
 }
-
-export default CustomNavbar;
