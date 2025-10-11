@@ -12,27 +12,26 @@ export default function Home() {
           Bridal · Extensions · Treatments · Precision Cuts
         </p>
         <div className="flex gap-4 mt-2">
-          <a
-            href="/services"
+          <Link
+            to="/services"
             className="px-6 py-3 rounded-full bg-black text-white font-semibold shadow-lg hover:bg-gray-900 transition"
           >
             Services
-          </a>
-          <a
-            href="/bridal"
+          </Link>
+          <Link
+            to="/bridal"
             className="px-6 py-3 rounded-full bg-white text-black border border-black font-semibold shadow-lg hover:bg-gray-100 transition"
           >
             Bridal
-          </a>
-          <a
-            href="/contact"
+          </Link>
+          <Link
+            to="/contact"
             className="px-6 py-3 rounded-full bg-white text-black border border-black font-semibold shadow-lg hover:bg-gray-100 transition"
           >
             Book
-          </a>
+          </Link>
         </div>
       </section>
-
       {/* About */}
       <section className="max-w-4xl mx-auto px-4 md:px-0 py-12 flex flex-col md:flex-row items-center gap-10">
         <img
