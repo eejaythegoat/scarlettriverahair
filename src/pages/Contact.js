@@ -7,6 +7,24 @@ function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Track "Book Now" button clicks
+  const handleBookNowClick = () => {
+    ReactGA.event({
+      category: "Booking",
+      action: "Book Now Button Clicked",
+      label: "Contact Page"
+    });
+  };
+
+  // Track email link clicks
+  const handleEmailClick = () => {
+    ReactGA.event({
+      category: "Contact",
+      action: "Email Link Clicked",
+      label: "Contact Page"
+    });
+  };
+
   // Handles actual form submission via Netlify Forms (no redirect!)
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,7 +54,7 @@ function Contact() {
         <h2>Thank you for reaching out!</h2>
         <p>
           Your message has been sent and Scarlett will get back to you as soon as possible.<br />
-          For urgent inquiries, email <a href="mailto:scarlettriverahair@gmail.com">scarlettriverahair@gmail.com</a> or book your appointment online.
+          For urgent inquiries, email <a href="mailto:scarlettriverahair@gmail.com" onClick={handleEmailClick}>scarlettriverahair@gmail.com</a> or book your appointment online.
         </p>
         <a href="/" className="btn btn-primary mt-3">Back to Home</a>
       </div>
@@ -53,7 +71,7 @@ function Contact() {
       </Helmet>
       <h2>Contact Scarlett Rivera</h2>
       <p>
-        Prefer email? <a href="mailto:scarlettriverahair@gmail.com">scarlettriverahair@gmail.com</a>
+        Prefer email? <a href="mailto:scarlettriverahair@gmail.com" onClick={handleEmailClick}>scarlettriverahair@gmail.com</a>
       </p>
       <hr />
 
@@ -101,7 +119,13 @@ function Contact() {
       <div className="mt-3">
         <strong>Salon Booking:</strong>
         <br />
-        <a href="https://nurootssalonanddayspa.com/" target="_blank" rel="noopener noreferrer" className="btn btn-outline-success mt-2">
+        <a
+          href="https://nurootssalonanddayspa.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-outline-success mt-2"
+          onClick={handleBookNowClick}
+        >
           Book with Scarlett at Nu Roots Salon
         </a>
       </div>
