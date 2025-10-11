@@ -9,6 +9,7 @@ function Contact() {
 
   // Track "Book Now" button clicks (GA4 event style)
   const handleBookNowClick = () => {
+    console.log("Book Now Clicked!"); // Add this line
     ReactGA.event("book_now_button_clicked", {
       page_location: window.location.pathname,
       page_title: document.title
@@ -17,11 +18,13 @@ function Contact() {
 
   // Track email link clicks (GA4 event style)
   const handleEmailClick = () => {
+    console.log("Email Link Clicked!"); // Add this line
     ReactGA.event("email_link_clicked", {
       page_location: window.location.pathname,
       page_title: document.title
     });
   };
+   
 
   // Handles actual form submission via Netlify Forms (no redirect!)
   const handleSubmit = (e) => {
