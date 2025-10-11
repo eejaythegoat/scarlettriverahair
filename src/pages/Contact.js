@@ -4,10 +4,9 @@ import ReactGA from "react-ga4";
 
 function Contact() {
   const formRef = useRef();
-  const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Track "Book Now" button clicks (GA4 event style)
+  // Track "Book Now" button clicks
   const handleBookNowClick = () => {
     ReactGA.event("book_now_button_clicked", {
       page_location: window.location.pathname,
@@ -15,7 +14,7 @@ function Contact() {
     });
   };
 
-  // Track email link clicks (GA4 event style)
+  // Track email link clicks
   const handleEmailClick = () => {
     ReactGA.event("email_link_clicked", {
       page_location: window.location.pathname,
@@ -23,41 +22,37 @@ function Contact() {
     });
   };
 
-  // Handles actual form submission via Netlify Forms (no redirect!)
+  // Handle form submission using mailto
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     const form = formRef.current;
-    const data = new FormData(form);
+    const name = form.elements.name.value;
+    const contact = form.elements.contact.value;
+    const inquiryType = form.elements.inquiryType.value;
+    const message = form.elements.message.value;
 
-    fetch("/", {
-      method: "POST",
-      body: data,
-    })
-      .then(() => setSubmitted(true))
-      .catch((error) => {
-        alert(error);
-        setIsSubmitting(false); // Re-enable button if error
-      });
+    // Compose email
+    const email = "scarlettriverahair@gmail.com";
+    const subject = encodeURIComponent(`Inquiry from ${name} (${inquiryType})`);
+    const body = encodeURIComponent(
+      `Name: ${name}\n` +
+      `Best Way to Contact: ${contact}\n` +
+      `Inquiry Type: ${inquiryType}\n\n` +
+      `Message:\n${message}`
+    );
+
+    // Track form submission
     ReactGA.event("contact_form_submitted", {
       page_location: window.location.pathname,
       page_title: document.title
     });
-  };
 
-  if (submitted) {
-    return (
-      <div className="container" style={{ maxWidth: '600px' }}>
-        <h2>Thank you for reaching out!</h2>
-        <p>
-          Your message has been sent and Scarlett will get back to you as soon as possible.<br />
-          For urgent inquiries, email <a href="mailto:scarlettriverahair@gmail.com" onClick={handleEmailClick}>scarlettriverahair@gmail.com</a> or book your appointment online.
-        </p>
-        <a href="/" className="btn btn-primary mt-3">Back to Home</a>
-      </div>
-    );
-  }
+    // Open mail client
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    setIsSubmitting(false);
+  };
 
   return (
     <div className="container" style={{ maxWidth: '600px' }}>
@@ -73,23 +68,19 @@ function Contact() {
       </p>
       <hr />
 
-      <form
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-        ref={formRef}
-        onSubmit={handleSubmit}
-      >
-        <input type="hidden" name="form-name" value="contact" />
-        <input type="hidden" name="bot-field" />
+      <form ref={formRef} onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">Name</label>
           <input type="text" className="form-control" id="name" name="name" required />
         </div>
         <div className="mb-3">
-          <label htmlFor="email" className="form-label">Email</label>
-          <input type="email" className="form-control" id="email" name="email" required />
+          <label htmlFor="contact" className="form-label">
+            Best Way to Contact You
+            <span style={{ fontWeight: "normal", fontSize: "0.9em" }}>
+              {" "} (Email, phone, Instagram, Facebook, LinkedIn, etc.)
+            </span>
+          </label>
+          <input type="text" className="form-control" id="contact" name="contact" required />
         </div>
         <div className="mb-3">
           <label htmlFor="inquiryType" className="form-label">Inquiry Type</label>
