@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga4';
 import CustomNavbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -27,7 +27,7 @@ function GAListener({ children }) {
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter basename="/scarlettriverahair">
       <GAListener>
         <CustomNavbar />
         <div className="container my-4" style={{ minHeight: '80vh' }}>
@@ -43,7 +43,7 @@ function App() {
         </div>
         <Footer />
       </GAListener>
-    </Router>
+    </BrowserRouter>
   );
 }
 
