@@ -10,6 +10,7 @@ function Contact() {
   // Track "Book Now" button clicks (GA4 event style)
   const handleBookNowClick = () => {
     console.log("Book Now Clicked!"); // Add this line
+    console.log("ReactGA object in Contact.js:", ReactGA);
     ReactGA.event("book_now_button_clicked", {
       page_location: window.location.pathname,
       page_title: document.title
@@ -19,6 +20,7 @@ function Contact() {
   // Track email link clicks (GA4 event style)
   const handleEmailClick = () => {
     console.log("Email Link Clicked!"); // Add this line
+    console.log("ReactGA object in Contact.js:", ReactGA);
     ReactGA.event("email_link_clicked", {
       page_location: window.location.pathname,
       page_title: document.title
@@ -43,6 +45,7 @@ function Contact() {
         alert(error);
         setIsSubmitting(false); // Re-enable button if error
       });
+    console.log("ReactGA object in Contact.js:", ReactGA);
     ReactGA.event("contact_form_submitted", {
       page_location: window.location.pathname,
       page_title: document.title
