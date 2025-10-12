@@ -4,13 +4,13 @@ export default function Footer() {
   return (
     <footer className="w-full pt-12 pb-6 bg-white text-center border-t border-neutral-200 mt-16">
       <div className="flex justify-center gap-6 mb-6">
-        <a href="https://instagram.com/yourinstagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <a href="https://www.instagram.com/scarlettriverahair/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <FaInstagram className="w-7 h-7 text-gray-700 hover:text-mustard transition" />
         </a>
         <a href="https://www.tiktok.com/@scarlettscissorhands" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
           <FaTiktok className="w-7 h-7 text-gray-700 hover:text-mustard transition" />
         </a>
-        <a href="https://facebook.com/yourfacebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <a href="https://www.facebook.com/p/Scarlett-Rivera-Hair-61577646897809/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
           <FaFacebook className="w-7 h-7 text-gray-700 hover:text-mustard transition" />
         </a>
         <a href="https://www.linkedin.com/in/scarlett-rivera-05a650101/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
