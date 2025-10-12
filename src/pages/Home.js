@@ -9,37 +9,28 @@ export default function Home() {
         <title>Scarlett Rivera Hair</title>
         <meta name="description" content="Hair Stylist / Bridal Artist / Hair Extensionist in Wheaton, IL" />
       </Helmet>
-      {/* Banner: 3 images left-to-right, overlay headline, fully responsive */}
+      {/* Banner: 3 images side by side with overlay headline */}
       <section className="relative w-full h-[340px] md:h-[400px] flex items-center justify-center bg-neutral-50 overflow-hidden">
         {/* Banner Images */}
         <div className="absolute inset-0 w-full h-full flex">
-          {/* Desktop: 3 images side by side */}
           <img
             src="/images/scarlett-bio.jpeg"
             alt="Scarlett Rivera"
-            className="w-0 flex-1 h-full object-cover hidden md:block"
+            className="w-1/3 h-full object-cover"
             style={{objectPosition: "center top"}}
             draggable={false}
           />
           <img
             src="/images/scarlett-center.jpg"
             alt="Scarlett Rivera in salon center"
-            className="w-0 flex-1 h-full object-cover hidden md:block"
+            className="w-1/3 h-full object-cover"
             style={{objectPosition: "center top"}}
             draggable={false}
           />
           <img
             src="/images/scarlett-right.jpg"
             alt="Scarlett Rivera with hair extensions"
-            className="w-0 flex-1 h-full object-cover hidden md:block"
-            style={{objectPosition: "center top"}}
-            draggable={false}
-          />
-          {/* Mobile: only center image displayed */}
-          <img
-            src="/images/scarlett-bio.jpeg"
-            alt="Scarlett Rivera"
-            className="w-full h-full object-cover md:hidden"
+            className="w-1/3 h-full object-cover"
             style={{objectPosition: "center top"}}
             draggable={false}
           />
