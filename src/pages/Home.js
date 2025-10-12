@@ -8,24 +8,22 @@ export default function Home() {
         <title>Scarlett Rivera Hair</title>
         <meta name="description" content="Hair Stylist / Bridal Artist / Hair Extensionist in Wheaton, IL" />
       </Helmet>
-      <section className="w-full py-20 bg-white border-b border-neutral-200">
+      <section className="w-full py-20 bg-neutral-50 border-b border-neutral-200">
         <div className="max-w-screen-lg mx-auto flex flex-col items-center">
           <h1 className="cursive text-6xl md:text-7xl text-center font-bold text-gray-900 mb-3">
             Scarlett Rivera Hair
           </h1>
-          {/* Mustard underline, like Tailwind site */}
           <span className="block w-32 h-2 rounded-full bg-mustard mb-4"></span>
           <p className="text-2xl font-semibold text-mustard text-center tracking-wide">
             Hair Stylist / Bridal Artist / Hair Extensionist
           </p>
         </div>
       </section>
-      {/* Bio Card */}
       <section className="max-w-screen-lg mx-auto px-4 py-16 flex flex-col md:flex-row gap-12 items-center">
         <img
-          src={process.env.PUBLIC_URL + "/images/scarlett-bio.jpeg"}
+          src="/images/scarlett-bio.jpeg"
           alt="Scarlett Rivera"
-          className="w-44 h-44 rounded-full object-cover border-4 border-mustard shadow-md"
+          className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-mustard shadow-md"
         />
         <div className="bg-white rounded-2xl shadow p-8 flex-1">
           <h2 className="text-3xl font-bold mb-3">Meet Scarlett</h2>

@@ -1,33 +1,27 @@
-import React from 'react';
-import { Helmet } from "react-helmet";
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-function Gallery() {
-  // Replace with real images as you receive them
-  const placeholderImages = [
-    "https://via.placeholder.com/300x200?text=Style+1",
-    "https://via.placeholder.com/300x200?text=Style+2",
-    "https://via.placeholder.com/300x200?text=Style+3",
-  ];
-
+export default function Gallery() {
   return (
-    <div className="container">
+    <>
       <Helmet>
-        <title>Scarlett Rivera Hair | Gallery</title>
-        <meta name="description" content="Explore the gallery of Scarlett Rivera Hair showcasing stunning hairstyles and transformations." />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://scarlettriverahair.com/gallery" />
+        <title>Gallery | Scarlett Rivera Hair</title>
       </Helmet>
-      <h2>Gallery</h2>
-      <div className="row">
-        {placeholderImages.map((src, i) => (
-          <div className="col-md-4 mb-4" key={i}>
-            <img src={src} alt={`Gallery ${i}`} className="img-fluid rounded shadow-sm" />
-          </div>
-        ))}
+      <div className="max-w-screen-lg mx-auto px-4 py-12">
+        <h1 className="text-4xl font-bold mb-8 text-center">Gallery</h1>
+        {/* Instagram Widget Embed Example:
+        <div className="mb-8">
+          <iframe src="INSTAGRAM_WIDGET_EMBED_URL" style={{width: "100%", height: "400px", border: 0}} scrolling="no" allowtransparency="true" title="Instagram Gallery"></iframe>
+        </div>
+        */}
+        {/* Custom Grid Gallery Example */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <img src="/images/gallery/photo1.jpg" alt="Gallery photo 1" className="rounded-xl object-cover aspect-square"/>
+          <img src="/images/gallery/photo2.jpg" alt="Gallery photo 2" className="rounded-xl object-cover aspect-square"/>
+          <img src="/images/gallery/photo3.jpg" alt="Gallery photo 3" className="rounded-xl object-cover aspect-square"/>
+          {/* Add more images as needed */}
+        </div>
       </div>
-      <p className="text-muted">Scarlett's portfolio coming soon!</p>
-    </div>
+    </>
   );
 }
-
-export default Gallery;

@@ -12,6 +12,7 @@ export default function Navbar() {
         <div className="flex items-center gap-6">
           <Link to="/services" className={`hover:text-mustard font-medium transition ${location.pathname === "/services" ? "text-mustard" : "text-neutral-700"}`}>Services</Link>
           <Link to="/bridal" className={`hover:text-mustard font-medium transition ${location.pathname === "/bridal" ? "text-mustard" : "text-neutral-700"}`}>Bridal</Link>
+          <Link to="/gallery" className={`hover:text-mustard font-medium transition ${location.pathname === "/gallery" ? "text-mustard" : "text-neutral-700"}`}>Gallery</Link>
           <Link to="/contact" className={`hover:text-mustard font-medium transition ${location.pathname === "/contact" ? "text-mustard" : "text-neutral-700"}`}>Contact</Link>
         </div>
       </nav>
