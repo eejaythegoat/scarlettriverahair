@@ -15,7 +15,7 @@ export default function Services() {
             className="mx-auto mb-10 w-full max-w-md rounded-2xl shadow-xl object-cover"
             onError={e => { e.target.style.display = "none"; }}
           />
-          <h1 className="text-4xl font-bold mb-10 text-center text-gray-900 font-sans tracking-tight">Services</h1>
+          <h1 className="text-4xl font-bold mb-10 text-center text-gray-900 font-sans tracking-tight">Behind the Chair</h1>
           <div className="grid gap-10 md:grid-cols-2">
             {/* Haircuts */}
             <div className="bg-white rounded-2xl shadow-xl p-8 flex-1">
@@ -73,7 +73,7 @@ export default function Services() {
             <div className="bg-white rounded-2xl shadow-xl p-8 flex-1">
               <h2 className="text-2xl font-bold mb-4 text-mustard font-sans tracking-tight">Hair Extensions</h2>
               <ul className="text-lg list-disc list-inside pl-2 space-y-2">
-                <li>We offer a variety of hair extension options and methods to suit your needs and lifestyle.</li>
+                <li>Scarlett offers a variety of hair extension options and methods to suit your needs and lifestyle.</li>
                 <li>Pricing and method are determined during a personal consultation to ensure the best fit.</li>
                 <li className="font-semibold text-mustard">Prices vary upon consultation.</li>
               </ul>
