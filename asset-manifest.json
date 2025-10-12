@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/scarlettriverahair/static/css/main.f9623435.css",
-    "main.js": "/scarlettriverahair/static/js/main.526135af.js",
+    "main.css": "/scarlettriverahair/static/css/main.65fb3030.css",
+    "main.js": "/scarlettriverahair/static/js/main.e607ebeb.js",
     "static/js/453.1c6d7c92.chunk.js": "/scarlettriverahair/static/js/453.1c6d7c92.chunk.js",
     "static/media/bootstrap-icons.woff?": "/scarlettriverahair/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
     "static/media/bootstrap-icons.woff2?": "/scarlettriverahair/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
     "index.html": "/scarlettriverahair/index.html",
-    "main.f9623435.css.map": "/scarlettriverahair/static/css/main.f9623435.css.map",
-    "main.526135af.js.map": "/scarlettriverahair/static/js/main.526135af.js.map",
+    "main.65fb3030.css.map": "/scarlettriverahair/static/css/main.65fb3030.css.map",
+    "main.e607ebeb.js.map": "/scarlettriverahair/static/js/main.e607ebeb.js.map",
     "453.1c6d7c92.chunk.js.map": "/scarlettriverahair/static/js/453.1c6d7c92.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f9623435.css",
-    "static/js/main.526135af.js"
+    "static/css/main.65fb3030.css",
+    "static/js/main.e607ebeb.js"
   ]
 }
