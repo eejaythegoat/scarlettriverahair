@@ -21,20 +21,20 @@ export default function Home() {
             style={{objectPosition: "center top"}}
           />
           <img
-            src="/images/scarlett-center.jpg"
+            src="/public/images/scarlett-center.jpg"
             alt="Scarlett Rivera in salon"
             className="w-1/3 h-full object-cover hidden md:block"
             style={{objectPosition: "center top"}}
           />
           <img
-            src="/images/scarlett-right.jpg"
+            src="/public/images/scarlett-right.jpg"
             alt="Scarlett Rivera with hair extensions"
             className="w-1/3 h-full object-cover hidden md:block"
             style={{objectPosition: "center top"}}
           />
           {/* Mobile: center image only */}
           <img
-            src="/images/scarlett-bio.jpeg"
+            src="/public/images/scarlett-bio.jpeg"
             alt="Scarlett Rivera"
             className="w-full h-full object-cover md:hidden"
             style={{objectPosition: "center top"}}

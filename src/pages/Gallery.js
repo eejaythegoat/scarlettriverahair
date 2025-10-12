@@ -5,7 +5,7 @@ export default function Gallery() {
   return (
     <>
       <Helmet>
-        <title>Gallery | Scarlett Rivera Hair</title>
+        <title>Scarlett Rivera Hair | Gallery</title>
       </Helmet>
       <div className="max-w-screen-lg mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-8 text-center">Gallery</h1>
