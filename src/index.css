@@ -3,9 +3,5 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
-}
-.cursive {
-  font-family: 'Dancing Script', cursive;
-  letter-spacing: 0.04em;
+  font-family: 'Times New Roman', Times, serif;
 }

@@ -9,8 +9,7 @@ module.exports = {
         mustard: '#F6C85F',
       },
       fontFamily: {
-        cursive: ['Dancing Script', 'cursive'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Times New Roman', 'Times', 'serif'],
       },
     },
   },
