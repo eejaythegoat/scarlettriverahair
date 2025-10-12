@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 
 export default function Contact() {
+  const [contactMethod, setContactMethod] = useState("Email");
+
   return (
     <>
       <Helmet>
@@ -23,9 +25,25 @@ export default function Contact() {
               className="bg-neutral-100 rounded-lg px-4 py-3 border border-neutral-200 focus:outline-none"
               required
             />
+            {/* Contact method */}
+            <label className="text-left font-medium text-gray-700 mt-2">
+              Best way to contact you
+            </label>
+            <select
+              value={contactMethod}
+              onChange={e => setContactMethod(e.target.value)}
+              className="bg-neutral-100 rounded-lg px-4 py-3 border border-neutral-200 focus:outline-none"
+            >
+              <option>Email</option>
+              <option>Phone</option>
+              <option>Instagram</option>
+              <option>Facebook</option>
+              <option>LinkedIn</option>
+              <option>Other</option>
+            </select>
             <input
-              type="email"
-              placeholder="Your Email"
+              type="text"
+              placeholder="Your contact (email, @instagram, etc)"
               className="bg-neutral-100 rounded-lg px-4 py-3 border border-neutral-200 focus:outline-none"
               required
             />
