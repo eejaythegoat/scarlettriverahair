@@ -9,38 +9,42 @@ export default function Home() {
         <title>Scarlett Rivera Hair</title>
         <meta name="description" content="Hair Stylist / Bridal Artist / Hair Extensionist in Wheaton, IL" />
       </Helmet>
-      {/* Banner with 3 images and overlay headline */}
+      {/* Banner: 3 images left-to-right, overlay headline, fully responsive */}
       <section className="relative w-full h-[340px] md:h-[400px] flex items-center justify-center bg-neutral-50 overflow-hidden">
         {/* Banner Images */}
-        <div className="absolute inset-0 w-full h-full flex md:flex-row flex-col items-center justify-center z-0">
+        <div className="absolute inset-0 w-full h-full flex">
           {/* Desktop: 3 images side by side */}
           <img
             src="/images/scarlett-bio.jpeg"
             alt="Scarlett Rivera"
-            className="w-1/3 h-full object-cover hidden md:block"
+            className="w-0 flex-1 h-full object-cover hidden md:block"
             style={{objectPosition: "center top"}}
+            draggable={false}
           />
           <img
-            src="/public/images/scarlett-center.jpg"
-            alt="Scarlett Rivera in salon"
-            className="w-1/3 h-full object-cover hidden md:block"
+            src="/images/scarlett-center.jpg"
+            alt="Scarlett Rivera in salon center"
+            className="w-0 flex-1 h-full object-cover hidden md:block"
             style={{objectPosition: "center top"}}
+            draggable={false}
           />
           <img
-            src="/public/images/scarlett-right.jpg"
+            src="/images/scarlett-right.jpg"
             alt="Scarlett Rivera with hair extensions"
-            className="w-1/3 h-full object-cover hidden md:block"
+            className="w-0 flex-1 h-full object-cover hidden md:block"
             style={{objectPosition: "center top"}}
+            draggable={false}
           />
-          {/* Mobile: center image only */}
+          {/* Mobile: only center image displayed */}
           <img
-            src="/public/images/scarlett-bio.jpeg"
+            src="/images/scarlett-bio.jpeg"
             alt="Scarlett Rivera"
             className="w-full h-full object-cover md:hidden"
             style={{objectPosition: "center top"}}
+            draggable={false}
           />
         </div>
-        {/* Glass overlay */}
+        {/* Glass overlay headline */}
         <div className="relative z-10 mx-auto px-4 py-8 rounded-3xl bg-white/80 backdrop-blur shadow-lg flex flex-col items-center border border-white w-[95%] max-w-2xl md:max-w-xl">
           <h1 className="text-4xl md:text-5xl text-center font-bold text-gray-900 mb-3 font-sans tracking-tight">
             Scarlett Rivera Hair
