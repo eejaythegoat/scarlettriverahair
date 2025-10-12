@@ -14,22 +14,22 @@ export default function Home() {
         {/* Banner Images */}
         <div className="absolute inset-0 w-full h-full flex">
           <img
-            src="/images/scarlett-bio.jpeg"
-            alt="Scarlett Rivera"
+            src="/images/home-left.jpeg"
+            alt="Scarlett Rivera Left Centered "
             className="w-1/3 h-full object-cover"
             style={{objectPosition: "center top"}}
             draggable={false}
           />
           <img
-            src="/images/scarlett-center.jpg"
-            alt="Scarlett Rivera in salon center"
+            src="/images/home-center.jpg"
+            alt="Scarlett Rivera Middle Centered"
             className="w-1/3 h-full object-cover"
             style={{objectPosition: "center top"}}
             draggable={false}
           />
           <img
-            src="/images/scarlett-right.jpg"
-            alt="Scarlett Rivera with hair extensions"
+            src="/images/home-right.jpg"
+            alt="Scarlett Rivera Right Centered"
             className="w-1/3 h-full object-cover"
             style={{objectPosition: "center top"}}
             draggable={false}
