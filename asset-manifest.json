@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/scarlettriverahair/static/css/main.6af64357.css",
-    "main.js": "/scarlettriverahair/static/js/main.77602940.js",
+    "main.css": "/scarlettriverahair/static/css/main.cdc72950.css",
+    "main.js": "/scarlettriverahair/static/js/main.54fe279d.js",
     "static/media/bootstrap-icons.woff?": "/scarlettriverahair/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
     "static/media/bootstrap-icons.woff2?": "/scarlettriverahair/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
     "index.html": "/scarlettriverahair/index.html",
-    "main.6af64357.css.map": "/scarlettriverahair/static/css/main.6af64357.css.map",
-    "main.77602940.js.map": "/scarlettriverahair/static/js/main.77602940.js.map"
+    "main.cdc72950.css.map": "/scarlettriverahair/static/css/main.cdc72950.css.map",
+    "main.54fe279d.js.map": "/scarlettriverahair/static/js/main.54fe279d.js.map"
   },
   "entrypoints": [
-    "static/css/main.6af64357.css",
-    "static/js/main.77602940.js"
+    "static/css/main.cdc72950.css",
+    "static/js/main.54fe279d.js"
   ]
 }
